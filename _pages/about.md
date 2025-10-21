@@ -17,42 +17,74 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am currently pursuing my Master's degree at the School of Microelectronics, [Southern University of Science and Technology (SUSTech)](https://www.sustech.edu.cn/), advised by [Prof. Quan Chen](https://www.sustech.edu.cn/zh/faculties/chenquan.html). I earned my Bachelor's degree in Automation from [Shenzhen University](https://www.szu.edu.cn/), with a minor in Computer Science and Technology.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
-
+<div style="flex: 1; margin-right: 1px;">
+    <h2>🔮 Research Interests</h2>
+    <ul>
+      <li><strong>AI for Electronic Design Automation (EDA)</strong></li>
+      <li><strong>Multi-fidelity machine learning method</strong></li>
+      <li><strong>Model order reduction and chip power modeling</strong></li>
+    </ul>
+  </div>
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+
+- *2025.09*: &nbsp;🎉🎉 One paper has been accepted by NeurIPS 2025!
+- *2025.06*: &nbsp;🎉🎉 Two paper has been accepted by ICCAD 2025! 
+- *2024.06*: &nbsp;🎉🎉 One paper has been accepted by ICCAD 2024! 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2025</div><img src='images/CAMO_poster.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[CAMO: Convergence-Aware Multi-Fidelity Bayesian Optimization](https://openreview.net/pdf?id=9jONuWKoLj)
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+Wei X.Xing #*, **Zhenjie Lu #**, Akeel Shah
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 </div>
 </div>
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCAD 2025</div><img src='images/MF-MOR.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MF-MOR: Multi-Fidelity Model Order Reduction  for Many-Port Linear Systems in Chip Power Modeling]()
+
+**Zhenjie Lu**, Hang Zhou, Quan Chen*
+
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCAD 2025</div><img src='images/EI-TR.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[EI-TR:A Versatile Exponential Integrator Framework for Transient Analysis of GenericNonlinear Circuits]()
+
+Hang Zhou, **Zhenjie Lu**, Quan Chen*
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCAD 2024</div><img src='images/iccad2024.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[ARO: Autoregressive Operator Learning for Transferable and Multi-fidelity 3D-IC Thermal Analysis with Active Learning](https://dl.acm.org/doi/pdf/10.1145/3676536.3676713)
+
+Mingyue Wang, Yuanqing Cheng, Weiheng Zeng, **Zhenjie Lu**, Vasilis F.Pavlidis, Wei W.Xing
+</div>
+</div>
+
+<!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.05* Outstanding Undergraduate Graduate, Shenzhen University
+- *2023.12* The fifth national integrated circuit EDA elite challenge national second prize  
+- *2021.08* National College Students Internet of Things Design Competition (Huawei Cup) National First Prize (top 2%)
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.09 - (now)*, School of Microelectronics, Southern University of Science and Technology (SUSTech). 
+- *2020.09 - 2024.07*, School of Mechanical, Electrical and Control Engineering, Shenzhen University (SZU). 
 
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 💻 Experiences
+### Beihang University
+- *2023.10 - 2024.06*, Research Assistant, supervised by [Prof. Wei X. Xing](https://wxing.me/)
