@@ -2,7 +2,7 @@
 :root { --ink:#21334a; --muted:#64748b; --link:#236b86; --line:#dfe7ef; --surface:#eef4f8; --font:'Segoe UI',-apple-system,BlinkMacSystemFont,Arial,sans-serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:88px; }
-body { margin:0; background:#f4f6fa; color:var(--ink); font:400 1rem/1.7 var(--font); -webkit-font-smoothing:antialiased; }
+body { margin:0; background:#0b1428; color:var(--ink); font:400 1rem/1.7 var(--font); -webkit-font-smoothing:antialiased; }
 ::selection { background:#deedf7; }
 a { color:var(--link); text-decoration:none; text-underline-offset:3px; }
 a:hover { text-decoration:underline; }
@@ -18,9 +18,14 @@ ul,ol { list-style:none; padding:0; margin:0; }
 /* A decorative background layer; cards and controls remain above it. */
 body { isolation:isolate; }
 main.wrap,.site-footer { position:relative; z-index:1; }
-.meteor-field { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; user-select:none; }
-.meteor { position:absolute; left:var(--x); top:var(--y); width:var(--length,140px); height:2px; border-radius:100%; opacity:0; background:linear-gradient(90deg,rgba(71,141,191,.75),rgba(111,177,209,.32) 35%,transparent); transform-origin:left center; animation:meteor-drift var(--period,12s) var(--delay,0s) linear infinite; }
-.meteor::before { content:''; position:absolute; left:0; top:-1px; width:4px; height:4px; border-radius:50%; background:#79b5d2; box-shadow:0 0 8px rgba(92,163,201,.35); }
+.meteor-field { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; user-select:none;
+  background:radial-gradient(ellipse at 14% 22%,rgba(54,82,139,.46),transparent 48%),radial-gradient(ellipse at 85% 65%,rgba(72,53,113,.4),transparent 48%),linear-gradient(135deg,#0b162c,#10192f 55%,#090f21); }
+.meteor-field::before,.meteor-field::after { content:''; position:absolute; inset:0; }
+.meteor-field::before { background:url('../../images/starfield.svg') center / cover; opacity:.9; }
+.meteor-field::after { background:radial-gradient(ellipse at 30% 65%,rgba(88,145,192,.1),transparent 40%),radial-gradient(ellipse at 72% 20%,rgba(127,107,192,.09),transparent 38%); animation:starlight 9s ease-in-out infinite alternate; }
+@keyframes starlight { from { opacity:.3; } to { opacity:1; } }
+.meteor { position:absolute; left:var(--x); top:var(--y); width:var(--length,140px); height:2px; border-radius:100%; opacity:0; background:linear-gradient(90deg,rgba(229,246,255,.95),rgba(142,204,241,.65) 35%,transparent); transform-origin:left center; animation:meteor-drift var(--period,12s) var(--delay,0s) linear infinite; }
+.meteor::before { content:''; position:absolute; left:0; top:-1px; width:4px; height:4px; border-radius:50%; background:#eefaff; box-shadow:0 0 10px rgba(161,219,255,.8); }
 .meteor:nth-child(1) { --x:12%; --y:14%; --period:12s; --delay:0s; }
 .meteor:nth-child(2) { --x:99%; --y:23%; --period:12s; --delay:-2s; --length:170px; }
 .meteor:nth-child(3) { --x:57%; --y:5%; --period:12s; --delay:-4s; --length:120px; }
@@ -29,7 +34,7 @@ main.wrap,.site-footer { position:relative; z-index:1; }
 .meteor:nth-child(6) { --x:70%; --y:48%; --period:12s; --delay:-10s; --length:125px; }
 @keyframes meteor-drift {
   0% { opacity:0; transform:translate3d(0,0,0) rotate(-35deg); }
-  3% { opacity:.7; }
+  3% { opacity:.95; }
   20% { opacity:0; transform:translate3d(-380px,266px,0) rotate(-35deg); }
   100% { opacity:0; transform:translate3d(-380px,266px,0) rotate(-35deg); }
 }
@@ -38,8 +43,8 @@ main.wrap,.site-footer { position:relative; z-index:1; }
   .meteor:nth-child(n+4) { display:none; }
 }
 @media (prefers-reduced-motion:reduce) {
-  .meteor-field { display:none; }
-  .meteor { animation:none; }
+  .meteor,.meteor-field::after { animation:none; }
+  .meteor { display:none; }
 }
 @media print { .meteor-field { display:none; } }
 
@@ -218,10 +223,32 @@ h1 { font-size:1.875rem; line-height:1.25; letter-spacing:-.025em; font-weight:6
   html { scroll-behavior:auto; }
   * { transition:none!important; }
 }
+/* Night sky framing with light reading surfaces. */
+.site-header { background:rgba(10,19,38,.92); border-bottom-color:rgba(174,202,236,.15); }
+.wordmark { background:#233d5b; box-shadow:inset 0 0 0 1px rgba(154,201,225,.2); }
+.nav-links a { color:#bdcce1; }
+.nav-links a:hover,.nav-links a[aria-current] { color:#e6f6ff; background:#243b57; }
+.research-strip h2 { color:#bfcee5; }
+.research-topic { background:rgba(28,48,76,.86); border-color:#344b68; color:#dceaf6; }
+.research-topic svg { color:#8ac8df; }
+.research-topic:nth-child(2) { background:rgba(29,53,66,.86); border-color:#36586a; }
+.research-topic:nth-child(2) svg { color:#9fd7cc; }
+.research-topic:nth-child(3) { background:rgba(46,43,73,.86); border-color:#504d72; }
+.research-topic:nth-child(3) svg { color:#bdb2ea; }
+.section-heading h2 { color:#e6eefc; }
+.section-heading .text-link { color:#addbf0; }
+.section-heading h2::before { background:linear-gradient(#8fcfe6,#799bc9); }
+.site-footer { color:#b8c9de; border-top-color:rgba(174,202,236,.2); }
+.site-footer a { color:#addbf0; }
+
 @media print {
   .site-header,.skip-link,.site-footer a { display:none; }
   .wrap { width:100%; }
-  body { font-size:11pt; }
+  body { font-size:11pt; background:#fff; }
+  .section-heading h2,.research-strip h2 { color:var(--ink); }
+  .section-heading .text-link { color:var(--link); }
+  .research-topic,.research-topic:nth-child(2),.research-topic:nth-child(3) { background:#f4f6fa; color:var(--ink); }
+  .site-footer { color:var(--muted); }
   .hero { padding-top:0; }
   .publication { break-inside:avoid; }
   .content-section { padding-top:22px; }
