@@ -15,6 +15,34 @@ ul,ol { list-style:none; padding:0; margin:0; }
 .skip-link { position:fixed; top:-100px; left:20px; padding:10px 16px; z-index:30; background:var(--ink); color:#fff; }
 .skip-link:focus { top:12px; }
 
+/* A decorative background layer; cards and controls remain above it. */
+body { isolation:isolate; }
+main.wrap,.site-footer { position:relative; z-index:1; }
+.meteor-field { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; user-select:none; }
+.meteor { position:absolute; left:var(--x); top:var(--y); width:var(--length,140px); height:2px; border-radius:100%; opacity:0; background:linear-gradient(90deg,rgba(71,141,191,.75),rgba(111,177,209,.32) 35%,transparent); transform-origin:left center; animation:meteor-drift var(--period,12s) var(--delay,0s) linear infinite; }
+.meteor::before { content:''; position:absolute; left:0; top:-1px; width:4px; height:4px; border-radius:50%; background:#79b5d2; box-shadow:0 0 8px rgba(92,163,201,.35); }
+.meteor:nth-child(1) { --x:12%; --y:14%; --period:12s; --delay:0s; }
+.meteor:nth-child(2) { --x:99%; --y:23%; --period:12s; --delay:-2s; --length:170px; }
+.meteor:nth-child(3) { --x:57%; --y:5%; --period:12s; --delay:-4s; --length:120px; }
+.meteor:nth-child(4) { --x:18%; --y:65%; --period:12s; --delay:-6s; --length:110px; }
+.meteor:nth-child(5) { --x:101%; --y:72%; --period:12s; --delay:-8s; --length:150px; }
+.meteor:nth-child(6) { --x:70%; --y:48%; --period:12s; --delay:-10s; --length:125px; }
+@keyframes meteor-drift {
+  0% { opacity:0; transform:translate3d(0,0,0) rotate(-35deg); }
+  3% { opacity:.7; }
+  20% { opacity:0; transform:translate3d(-380px,266px,0) rotate(-35deg); }
+  100% { opacity:0; transform:translate3d(-380px,266px,0) rotate(-35deg); }
+}
+@media (max-width:600px) {
+  .meteor { width:90px; }
+  .meteor:nth-child(n+4) { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .meteor-field { display:none; }
+  .meteor { animation:none; }
+}
+@media print { .meteor-field { display:none; } }
+
 /* Quiet navigation. */
 .site-header { position:sticky; top:0; z-index:10; background:rgba(244,246,250,.95); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
 .navigation { display:flex; align-items:center; min-height:72px; gap:32px; }
