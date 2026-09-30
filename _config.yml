@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Zhenjie"
-description              : "Master Student at SUSTech"
+description              : "Ph.D. Student at SUSTech"
 repository               : "Fillip1233/Fillip1233.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,8 +21,8 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Zhenjie Lu 卢振杰"
-  avatar           : "images/zhenjie2.png"
+  name             : "Zhenjie Lu"
+  avatar           : "images/new_photos.jpg"
   bio              : "I am a funny guy~"
   location         : "Shenzhen, China"
   employer         :
