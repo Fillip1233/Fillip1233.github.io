@@ -39,6 +39,7 @@ redirect_from:
   </ul>
 </section>
 
+<div class="desktop-content">
 <section class="content-section" id="publications" aria-labelledby="publications-title">
   <span class="legacy-anchor" id="-publications"></span>
   <div class="section-heading"><h2 id="publications-title">Publications</h2><a class="text-link" href="{{ site.author.googlescholar }}">Google Scholar <span aria-hidden="true">↗</span></a></div>
@@ -82,6 +83,7 @@ redirect_from:
   </div>
 </section>
 
+<div class="supporting-sections">
 <section class="content-section news-section" id="news" aria-labelledby="news-title">
   <span class="legacy-anchor" id="-news"></span>
   <div class="section-heading"><h2 id="news-title">Latest news</h2></div>
@@ -101,6 +103,9 @@ redirect_from:
     <li><time datetime="2021-08">Aug 2021</time><div><h3>National First Prize <span class="small-tag">Top 2%</span></h3><p>National College Students Internet of Things Design Competition (Huawei Cup)</p></div></li>
   </ul>
 </section>
+
+</div>
+</div>
 
 <div class="background-grid">
   <section class="content-section" id="education" aria-labelledby="education-title">
